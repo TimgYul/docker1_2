@@ -7,7 +7,9 @@ from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter
 from rest_framework.pagination import LimitOffsetPagination
 
-
+class SearchF(SearchFilter):
+    search_param = Product
+    
 class ProductViewSet(ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
@@ -23,5 +25,5 @@ class StockViewSet(ModelViewSet):
     pagination_class = LimitOffsetPagination
     # при необходимости добавьте параметры фильтрации
     pagination_class = LimitOffsetPagination
-    filter_backends = [DjangoFilterBackend]
-    filterset_fields = ['products__title', 'products__description']
+    filter_backends = [SearchF]
+    search_fields = ['products__title', 'products__description']
