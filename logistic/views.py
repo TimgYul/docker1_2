@@ -26,4 +26,4 @@ class StockViewSet(ModelViewSet):
     # при необходимости добавьте параметры фильтрации
     pagination_class = LimitOffsetPagination
     filter_backends = [SearchF]
-    search_fields = ['products__title', 'products__description']
+    search_fields = ['product__title', 'product__description']
