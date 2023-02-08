@@ -8,7 +8,7 @@ from rest_framework.filters import SearchFilter
 from rest_framework.pagination import LimitOffsetPagination
 
 class SearchF(SearchFilter):
-    search_param = Product
+    search_param = 'products'
     
 class ProductViewSet(ModelViewSet):
     queryset = Product.objects.all()
@@ -26,4 +26,4 @@ class StockViewSet(ModelViewSet):
     # при необходимости добавьте параметры фильтрации
     pagination_class = LimitOffsetPagination
     filter_backends = [SearchF]
-    search_fields = ['product__title', 'product__description']
+    search_fields = ['products__title', 'products__description']
