@@ -2,6 +2,11 @@
 
 ## Техническая задача: реализовать CRUD-логику для продуктов и складов, используя Django Rest Framework.
 
+##  Команды для запуска сборки
+-   sudo docker build . --tag=my_app_q
+-   docker run -it -d -p 8000:8000 my_app_q
+-   curl localhost:8000
+
 **CRUD** – аббревиатура для Create-Read-Update-Delete. Ей обозначают логику для операций создания-чтения-обновления-удаления сущностей. Подробнее: https://ru.wikipedia.org/wiki/CRUD
 
 ## Описание
