@@ -7,8 +7,8 @@ POST {{baseUrl}}/products/
 Content-Type: application/json
 
 {
-  "title": "Черри",
-  "description": "Лучшие помидоры на рынке"
+  "title": "лук",
+  "description": "сладкий"
 }
 
 ###
@@ -46,7 +46,7 @@ POST {{baseUrl}}/stocks/
 Content-Type: application/json
 
 {
-  "address": "Склад Магнит",
+  "address": "Склад Monetka",
   "positions": [
     {
       "product": 2,
@@ -85,5 +85,5 @@ Content-Type: application/json
 ###
 
 # поиск складов, где есть определенный продукт
-GET {{baseUrl}}/stocks/?products=2
+GET {{baseUrl}}/stocks/?products=1
 Content-Type: application/json
